@@ -105,5 +105,5 @@ Las notas detalladas de cada modulo estan en:
 ## Metadata
 - **Version**: 1.1 (incluye Panel de Administracion y Flujo de Aplicacion)
 - **Fecha**: 04/04/2026
-- **Autor**: Joan Mora Rojas
+- **Autor**: Jose Alonso Porras Ramirez
 - **Proyecto**: Cora - Plataforma de Terapia Online

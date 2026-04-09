@@ -6,7 +6,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <!-- Title -->
-        <mxCell id="title" value="&lt;h1&gt;Cora - Arquitectura de Modulos (Nivel 0)&lt;/h1&gt;&lt;p&gt;Plataforma de Terapia Online | Version 1.0 | 04/04/2026 | Autor: Joan Mora Rojas&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="title" value="&lt;h1&gt;Cora - Arquitectura de Modulos (Nivel 0)&lt;/h1&gt;&lt;p&gt;Plataforma de Terapia Online | Version 1.0 | 04/04/2026 | Autor: Jose Alonso Porras Ramirez&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="280" y="20" width="600" height="60" as="geometry" />
         </mxCell>
         <!-- Legend -->

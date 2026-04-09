@@ -3,7 +3,7 @@
 -- ============================================================
 -- Versión: 1.0.0
 -- Fecha: 2026-04-07
--- Autor: Joan Mora Rojas / Cora
+-- Autor: Jose Alonso Porras Ramirez / Cora
 -- ============================================================
 -- INSTRUCCIONES:
 -- 1. Ir a Supabase Dashboard > SQL Editor
