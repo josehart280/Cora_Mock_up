@@ -282,7 +282,7 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para guías detalladas.
 Si encuentras una vulnerabilidad de seguridad, **NO** uses el tracker de Issues. Envía un email a:
 
 ```
-seguridad@tucora.com
+josealonso.0186@gmail.com
 ```
 
 Incluir:
@@ -306,7 +306,7 @@ Ver [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 ## Roadmap
 
 - [x] Planificación y documentación (EDT, arquitectura)
-- [ ] Sprint 1: Fundamentos (Auth + Dashboard)
+- [ x] Sprint 1: Fundamentos (Auth + Dashboard)
 - [ ] Sprint 2: Módulo de Citas
 - [ ] Sprint 3: Pagos (Stripe)
 - [ ] Sprint 4: Sesiones de Terapia (WebRTC)
@@ -314,9 +314,9 @@ Ver [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 - [ ] Sprint 6: Panel Admin + Polish
 - [ ] Lanzamiento MVP
 
-## Autores
+## Autor
 
-- **Joan Mora Rojas** - Arquitecto y Lead Developer
+- **Jose Alonso Porras Ramirez** - Arquitecto y Lead Developer
 
 ## Licencia
 
