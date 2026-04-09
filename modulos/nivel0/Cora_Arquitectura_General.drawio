@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:20:00.000Z" agent="Cora SDD" version="24.0.0" type="device">
+  <diagram id="cora-nivel0-arch" name="Cora - Arquitectura General Nivel 0">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Title -->
+        <mxCell id="title" value="&lt;h1&gt;Cora - Arquitectura de Modulos (Nivel 0)&lt;/h1&gt;&lt;p&gt;Plataforma de Terapia Online | Version 1.0 | 04/04/2026 | Autor: Joan Mora Rojas&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="20" width="600" height="60" as="geometry" />
+        </mxCell>
+        <!-- Legend -->
+        <mxCell id="legend-title" value="&lt;b&gt;Leyenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="880" y="620" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-core" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A90E2;strokeColor=#357AB8;strokeWidth=2;arcSize=12" vertex="1" parent="1">
+          <mxGeometry x="885" y="655" width="24" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-core-text" value="Modulo Core" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="915" y="652" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-support" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12" vertex="1" parent="1">
+          <mxGeometry x="885" y="680" width="24" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-support-text" value="Modulo Soporte" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="915" y="677" width="100" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-transversal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12" vertex="1" parent="1">
+          <mxGeometry x="885" y="705" width="24" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-transversal-text" value="Modulo Transversal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="915" y="702" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-admin" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12" vertex="1" parent="1">
+          <mxGeometry x="885" y="730" width="24" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-admin-text" value="Panel Administracion" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="915" y="727" width="120" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-arrow" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5" edge="1" parent="1">
+          <mxGeometry x="885" y="760" width="50" as="geometry">
+            <mxPoint x="885" y="769" as="sourcePoint" />
+            <mxPoint x="935" y="769" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-arrow-text" value="Interaccion entre modulos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="945" y="757" width="150" height="24" as="geometry" />
+        </mxCell>
+        <!-- Module 1: Autenticacion y Gestion de Usuarios (Core - Top Center) -->
+        <mxCell id="mod-auth" value="&lt;b&gt;1. Autenticacion y&lt;br&gt;Gestion de Usuarios&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Registro, Login, Perfiles,&lt;br&gt;Verificacion de Credenciales&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A90E2;strokeColor=#357AB8;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="120" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 2: Sesiones Terapeuticas (Core - Center) -->
+        <mxCell id="mod-sessions" value="&lt;b&gt;2. Sesiones&lt;br&gt;Terapeuticas&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Video Chat, Chat Seguro,&lt;br&gt;Historial de Sesiones&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A90E2;strokeColor=#357AB8;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="280" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 3: Gestion de Citas (Support - Left) -->
+        <mxCell id="mod-appointments" value="&lt;b&gt;3. Gestion de Citas&lt;br&gt;y Calendario&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Calendario, Recordatorios,&lt;br&gt;Disponibilidad&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="140" y="280" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 4: Pagos y Suscripciones (Core - Right) -->
+        <mxCell id="mod-payments" value="&lt;b&gt;4. Pagos y&lt;br&gt;Suscripciones&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Procesamiento Seguro,&lt;br&gt;Comision 15%, Facturacion&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A90E2;strokeColor=#357AB8;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="780" y="280" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 5: Comunidad y Contenido (Support - Bottom Left) -->
+        <mxCell id="mod-community" value="&lt;b&gt;5. Comunidad y&lt;br&gt;Contenido (Blog)&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Experiencias Anonimas,&lt;br&gt;Blog Profesionales, Moderacion&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="140" y="440" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 6: Calificaciones y Feedback (Transversal - Bottom Center) -->
+        <mxCell id="mod-ratings" value="&lt;b&gt;6. Calificaciones y&lt;br&gt;Feedback&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Resenas, Evaluacion,&lt;br&gt;Metricas de Satisfaccion&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="440" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 7: Sala de Reunion Virtual (Transversal - Bottom Right) -->
+        <mxCell id="mod-virtualroom" value="&lt;b&gt;7. Sala de Reunion&lt;br&gt;Virtual&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Espacios Grupales, Reglas,&lt;br&gt;Grabacion con Consentimiento&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="780" y="440" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Module 8: Panel de Administracion (Admin - Right Side) -->
+        <mxCell id="mod-admin" value="&lt;b&gt;8. Panel de&lt;br&gt;Administracion&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Gestion Usuarios, Aprobaciones,&lt;br&gt;Reportes, Configuracion, Auditoria&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="780" y="120" width="220" height="100" as="geometry" />
+        </mxCell>
+        <!-- Connections: Auth -> All -->
+        <mxCell id="conn-auth-sessions" value="Auth Token" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-auth" target="mod-sessions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-auth-appointments" value="Auth Token" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-auth" target="mod-appointments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-auth-payments" value="Usuario Verificado" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-auth" target="mod-payments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-auth-community" value="Perfil Publico" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-auth" target="mod-community">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-auth-ratings" value="Usuario Verificado" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-auth" target="mod-ratings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-auth-virtualroom" value="Acceso Controlado" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-auth" target="mod-virtualroom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Sessions <-> Appointments -->
+        <mxCell id="conn-sessions-appointments" value="Programacion" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-sessions" target="mod-appointments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Sessions <-> Payments -->
+        <mxCell id="conn-sessions-payments" value="Cobro por Sesion" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-sessions" target="mod-payments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Sessions <-> Ratings -->
+        <mxCell id="conn-sessions-ratings" value="Feedback Post-Sesion" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-sessions" target="mod-ratings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Sessions <-> Virtual Room -->
+        <mxCell id="conn-sessions-virtualroom" value="Integracion Video" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-sessions" target="mod-virtualroom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Community <-> Users -->
+        <mxCell id="conn-community-users" value="Publicacion/Consumo" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-community" target="mod-ratings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Community <-> Psychologists -->
+        <mxCell id="conn-community-psychologists" value="Creacion de Contenido" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-community" target="mod-virtualroom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connections: Payments <-> All Transactional -->
+        <mxCell id="conn-payments-appointments" value="Confirmacion de Pago" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="mod-payments" target="mod-appointments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Admin Panel connections to all modules -->
+        <mxCell id="conn-admin-auth" value="Gestiona" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-sessions" value="Monitorea" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-sessions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-appointments" value="Supervisa" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-appointments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-payments" value="Supervisa" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-payments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-community" value="Modera" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-community">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-ratings" value="Analiza" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-ratings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-virtualroom" value="Configura" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="mod-admin" target="mod-virtualroom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- External Systems -->
+        <mxCell id="ext-payment-gateway" value="&lt;b&gt;Pasarela de Pagos&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Stripe / PayPal&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=11;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="1050" y="280" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-webrtc" value="&lt;b&gt;WebRTC Server&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Video Encriptado&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=11;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="1050" y="380" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-db" value="&lt;b&gt;Base de Datos&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;PostgreSQL / MongoDB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=11;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="1050" y="480" width="140" height="60" as="geometry" />
+        </mxCell>
+        <!-- External connections -->
+        <mxCell id="conn-ext-payment" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=1;dashed=1;dashPattern=3 3;" edge="1" parent="1" source="mod-payments" target="ext-payment-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-ext-webrtc" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=1;dashed=1;dashPattern=3 3;" edge="1" parent="1" source="mod-sessions" target="ext-webrtc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-ext-db" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=1;dashed=1;dashPattern=3 3;" edge="1" parent="1" source="mod-auth" target="ext-db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Compliance Note -->
+        <mxCell id="compliance-note" value="&lt;b&gt;Compliance&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot;&gt;Ley 8968 (Proteccion de Datos)&lt;br&gt;CPPCR (Colegio de Psicologos)&lt;br&gt;Encriptacion End-to-End&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#FFC107;strokeWidth=1;arcSize=8;fontSize=10;fontColor=#856404;align=left;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="20" y="620" width="220" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

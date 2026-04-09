@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:00:00.000Z" agent="Cora SDD" version="24.0.0" type="device">
+  <diagram id="cora-ratings-nivel1" name="Cora - Calificaciones y Feedback (Nivel 1)">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Modulo 6: Calificaciones y Feedback (Nivel 1)&#10;Detalle de Subcomponentes e Interfaces | Version 1.0 | 03/04/2026" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="770" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-reviews" value="Sistema de Resenas&#10;- Calificacion 1-5 estrellas&#10;- Comentario opcional&#10;- Resena verificada&#10;- Respuesta del psicologo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-evaluation" value="Evaluacion de Psicologos&#10;- Metricas agregadas&#10;- Promedio ponderado&#10;- Tendencia temporal&#10;- Comparativa objetiva" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-metrics" value="Metricas de Satisfaccion&#10;- NPS (Net Promoter Score)&#10;- Tasa de retencion&#10;- Satisfaccion general&#10;- Reportes de calidad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-reports" value="Reportes de Problemas&#10;- Reportar conducta&#10;- Quejas formales&#10;- Escalamiento automatico&#10;- Seguimiento de caso" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-anonymous" value="Retroalimentacion Anonima&#10;- Encuestas anonimas&#10;- Feedback post-sesion&#10;- Sugerencias de mejora&#10;- Privacidad total" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-reviews-evaluation" value="Datos" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-reviews" target="sub-evaluation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-evaluation-metrics" value="Calcular" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-evaluation" target="sub-metrics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-reviews-reports" value="Reportar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-reviews" target="sub-reports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-reviews-anonymous" value="Encuesta" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-reviews" target="sub-anonymous">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-sessions-rat" value="-&gt; Sesiones Terapeuticas&#10;Feedback post-sesion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-auth-rat" value="-&gt; Autenticacion&#10;Usuario verificado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-community-rat" value="-&gt; Comunidad&#10;Contenido valorado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="580" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-rat-sessions" value="" style="endArrow=classic;html=1;strokeColor=#F5A623;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-reviews" target="ext-sessions-rat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-rat-auth" value="" style="endArrow=classic;html=1;strokeColor=#F5A623;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-reviews" target="ext-auth-rat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-rat-community" value="" style="endArrow=classic;html=1;strokeColor=#F5A623;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-anonymous" target="ext-community-rat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note-rat" value="FUNCIONALIDAD: Prevencion de resenas falsas&#10;Anonimato opcional para feedback&#10;Metricas agregadas para psicologos&#10;Escalamiento automatico de quejas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1ECF1;strokeColor=#17A2B8;strokeWidth=1;arcSize=8;fontSize=10;fontColor=#0C5460;align=left;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="20" y="560" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-rat" value="Leyenda:&#10;Naranja = Componente Transversal&#10;Rojo = Componente Critico/Seguridad&#10;Gris punteado = Interfaces externas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="860" y="560" width="250" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

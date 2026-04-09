@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:01:00.000Z" agent="Cora SDD" version="24.0.0" type="device">
+  <diagram id="cora-virtualroom-nivel1" name="Cora - Sala de Reunion Virtual (Nivel 1)">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Modulo 7: Sala de Reunion Virtual (Nivel 1)&#10;Detalle de Subcomponentes e Interfaces | Version 1.0 | 03/04/2026" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="770" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-room-mgmt" value="Gestion de Salas&#10;- Crear sala virtual&#10;- Configurar capacidad&#10;- Invitar participantes&#10;- Cerrar sala" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-rules" value="Reglas de Participacion&#10;- Reglamento de la sala&#10;- Aceptacion de normas&#10;- Comportamiento esperado&#10;- Sanciones por incumplimiento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-recording-vr" value="Grabacion con Consentimiento&#10;- Consentimiento explicito&#10;- Grabacion de sesion grupal&#10;- Almacenamiento seguro&#10;- Acceso restringido" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-moderation-vr" value="Moderacion en Tiempo Real&#10;- Moderador de sala&#10;- Silenciar participantes&#10;- Expulsar por conducta&#10;- Chat moderado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-scalability" value="Escalabilidad de Grupos&#10;- Limites de participantes&#10;- Calidad adaptativa&#10;- Balanceo de carga&#10;- Fallback a audio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5A623;strokeColor=#C87F0A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-room-rules" value="Configurar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-room-mgmt" target="sub-rules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-room-recording" value="Habilitar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-room-mgmt" target="sub-recording-vr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-rules-moderation" value="Aplicar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-rules" target="sub-moderation-vr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-room-scalability" value="Escalar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-room-mgmt" target="sub-scalability">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-moderation-recording" value="Controlar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-moderation-vr" target="sub-recording-vr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-sessions-vr" value="-&gt; Sesiones Terapeuticas&#10;Integracion con video individual" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-auth-vr" value="-&gt; Autenticacion&#10;Acceso controlado a salas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-community-vr" value="-&gt; Comunidad&#10;Eventos grupales anunciados" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="580" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-vr-sessions" value="" style="endArrow=classic;html=1;strokeColor=#F5A623;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-room-mgmt" target="ext-sessions-vr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-vr-auth" value="" style="endArrow=classic;html=1;strokeColor=#F5A623;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-room-mgmt" target="ext-auth-vr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-vr-community" value="" style="endArrow=classic;html=1;strokeColor=#F5A623;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-room-mgmt" target="ext-community-vr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note-vr" value="FUNCIONALIDAD: Limites de participantes configurables&#10;Permisos de grabacion con consentimiento&#10;Regulacion de espacios terapeuticos grupales&#10;Moderador obligatorio en todas las salas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1ECF1;strokeColor=#17A2B8;strokeWidth=1;arcSize=8;fontSize=10;fontColor=#0C5460;align=left;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="20" y="560" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-vr" value="Leyenda:&#10;Naranja = Componente Transversal&#10;Rojo = Componente Critico/Seguridad&#10;Gris punteado = Interfaces externas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="860" y="560" width="250" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

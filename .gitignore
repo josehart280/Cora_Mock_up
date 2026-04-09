@@ -1,0 +1,182 @@
+# ===========================================
+# CORA - .gitignore
+# ===========================================
+
+# ===========================================
+# NODE.JS
+# ===========================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment files (NEVER COMMIT THESE)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging.local
+
+# ===========================================
+# REACT (Vite)
+# ===========================================
+
+# Vite
+.vite/
+
+# React
+*.log
+
+# ===========================================
+# EDITORS & IDEs
+# ===========================================
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Sublime Text
+*.sublime-*
+
+# Atom
+.atom/
+
+# Emacs
+*~
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ===========================================
+# OS
+# ===========================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# ===========================================
+# SUPABASE
+# ===========================================
+
+# Supabase local development
+.supabase/
+
+# ===========================================
+# TESTING & DEBUGGING
+# ===========================================
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Jest
+jest.junit.xml
+
+# Vitest
+vitest.workspace.ts
+
+# MSW
+.mocks/
+
+# ===========================================
+# DOCUMENTATION GENERATED
+# ===========================================
+
+# API docs generated
+docs/generated/
+
+# ===========================================
+# CREDENTIALS & SECRETS
+# ===========================================
+
+# NEVER COMMIT THESE
+*.pem
+*.key
+*.crt
+credentials.json
+service-account.json
+*.p12
+*.pfx
+
+# Stripe
+.stripe/
+
+# ===========================================
+# LOGS
+# ===========================================
+
+*.log
+logs/
+*.log.*
+
+# ===========================================
+# TEMPORARY FILES
+# ===========================================
+
+.tmp/
+.temp/
+tmp/
+*.tmp
+.cache/
+
+# ===========================================
+# PROJECT-SPECIFIC IGNORES
+# ===========================================
+
+# Claude Code configuration (meta-tooling, not project)
+.claude/
+CLAUDE.md
+
+# External tools (not project-related)
+.atl/
+.opencode/
+.ruff_cache/
+
+# Temporary/garbage files
+nul
+24h

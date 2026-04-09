@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-03T23:59:00.000Z" agent="Cora SDD" version="24.0.0" type="device">
+  <diagram id="cora-community-nivel1" name="Cora - Comunidad y Contenido (Nivel 1)">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Modulo 5: Comunidad y Contenido - Blog (Nivel 1)&#10;Detalle de Subcomponentes e Interfaces | Version 1.0 | 03/04/2026" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="770" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-experiences" value="Experiencias Anonimas&#10;- Publicar experiencia&#10;- Anonimato garantizado&#10;- Categorizar por tema&#10;- Reacciones y comentarios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-psychblog" value="Blog de Psicologos&#10;- Articulos profesionales&#10;- Tips de bienestar&#10;- Credenciales visibles&#10;- Visibilidad profesional" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-moderation" value="Moderacion Etica&#10;- Filtro de lenguaje&#10;- Revision de contenido&#10;- Reportes de usuarios&#10;- Acciones correctivas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-categorization" value="Categorizacion de Contenido&#10;- Tags y categorias&#10;- Busqueda por tema&#10;- Filtros avanzados&#10;- Contenido recomendado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-search" value="Busqueda&#10;- Busqueda por texto&#10;- Busqueda por categoria&#10;- Busqueda por autor&#10;- Resultados relevantes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7ED321;strokeColor=#62A81A;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-exp-moderation" value="Revision" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-experiences" target="sub-moderation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-blog-moderation" value="Revision" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-psychblog" target="sub-moderation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-exp-categorization" value="Categorizar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-experiences" target="sub-categorization">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-blog-categorization" value="Categorizar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-psychblog" target="sub-categorization">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-categorization-search" value="Indexar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-categorization" target="sub-search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-auth-comm" value="-&gt; Autenticacion&#10;Perfil publico del autor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-ratings-comm" value="-&gt; Calificaciones&#10;Contenido valorado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-sessions-comm" value="-&gt; Sesiones Terapeuticas&#10;Referencias a contenido" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="580" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-comm-auth" value="" style="endArrow=classic;html=1;strokeColor=#7ED321;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-psychblog" target="ext-auth-comm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-comm-ratings" value="" style="endArrow=classic;html=1;strokeColor=#7ED321;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-experiences" target="ext-ratings-comm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-comm-sessions" value="" style="endArrow=classic;html=1;strokeColor=#7ED321;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-psychblog" target="ext-sessions-comm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note-comm" value="COMPLIANCE: Moderacion de lenguaje&#10;Prevencion de contenido danino&#10;Anonimato garantizado para usuarios&#10;Publicidad etica sin promesas de cura" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1ECF1;strokeColor=#17A2B8;strokeWidth=1;arcSize=8;fontSize=10;fontColor=#0C5460;align=left;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="20" y="560" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-comm" value="Leyenda:&#10;Verde = Componente de Soporte&#10;Rojo = Componente Critico/Seguridad&#10;Gris punteado = Interfaces externas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="860" y="560" width="250" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

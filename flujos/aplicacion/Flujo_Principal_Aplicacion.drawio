@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:10:00.000Z" agent="Cora SDD" version="24.0.0" type="device">
+  <diagram id="cora-app-flow" name="Cora - Flujo Principal de la Aplicacion">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Title -->
+        <mxCell id="title" value="Cora - Flujo Principal de la Aplicacion&#10;Plataforma de Terapia Online | Version 1.0 | 04/04/2026" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="850" height="55" as="geometry" />
+        </mxCell>
+        <!-- Legend -->
+        <mxCell id="legend-start" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-start-text" value="Inicio" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="105" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-process" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="140" width="30" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-process-text" value="Proceso" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="137" width="60" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-decision" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1325" y="175" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-decision-text" value="Decision" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="172" width="60" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-db" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#8E44AD;strokeColor=#6C3483;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="210" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-db-text" value="Base de Datos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="210" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-ext" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#999999;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="245" width="30" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-ext-text" value="Sistema Externo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1355" y="242" width="100" height="28" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PHASE 1: REGISTRO Y AUTENTICACION ===== -->
+        <!-- Start -->
+        <mxCell id="start" value="Inicio" style="ellipse;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;strokeWidth=2;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- Registro -->
+        <mxCell id="registro" value="Registro de Usuario&#10;(Email/Telefono + Contrasena)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="210" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- OTP -->
+        <mxCell id="otp" value="Verificacion OTP&#10;(Email o SMS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="310" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Tipo de Usuario -->
+        <mxCell id="tipo-usuario" value="Tipo de Usuario?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;strokeWidth=2;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="120" y="410" width="140" height="70" as="geometry" />
+        </mxCell>
+        <!-- Perfil Paciente -->
+        <mxCell id="perfil-paciente" value="Completar Perfil&#10;de Paciente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="520" width="160" height="60" as="geometry" />
+        </mxCell>
+        <!-- Perfil Psicologo -->
+        <mxCell id="perfil-psicologo" value="Completar Perfil&#10;de Psicologo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="520" width="160" height="60" as="geometry" />
+        </mxCell>
+        <!-- Verificacion Psicologo -->
+        <mxCell id="verificacion" value="Verificacion de&#10;Credenciales (CPPCR)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="620" width="160" height="60" as="geometry" />
+        </mxCell>
+        <!-- Aprobacion Admin -->
+        <mxCell id="aprobacion" value="Aprobacion&#10;del Admin?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;strokeWidth=2;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="260" y="720" width="140" height="60" as="geometry" />
+        </mxCell>
+        <!-- Rechazado -->
+        <mxCell id="rechazado" value="Notificar Rechazo&#10;y Motivo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="450" y="720" width="140" height="60" as="geometry" />
+        </mxCell>
+        <!-- Aceptado -->
+        <mxCell id="aceptado" value="Psicologo Activo&#10;en Plataforma" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="250" y="820" width="160" height="60" as="geometry" />
+        </mxCell>
+        <!-- Paciente Activo -->
+        <mxCell id="paciente-activo" value="Paciente Activo&#10;en Plataforma" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="50" y="820" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections Phase 1 -->
+        <mxCell id="c-start-reg" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="start" target="registro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-reg-otp" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="registro" target="otp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-otp-tipo" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="otp" target="tipo-usuario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-tipo-paciente" value="Paciente" style="endArrow=classic;html=1;strokeColor=#27AE60;strokeWidth=2;fontSize=10;fontColor=#27AE60;" edge="1" parent="1" source="tipo-usuario" target="perfil-paciente">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-tipo-psicologo" value="Psicologo" style="endArrow=classic;html=1;strokeColor=#3498DB;strokeWidth=2;fontSize=10;fontColor=#3498DB;" edge="1" parent="1" source="tipo-usuario" target="perfil-psicologo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-psic-verif" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="perfil-psicologo" target="verificacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-verif-aprob" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="verificacion" target="aprobacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-aprob-rech" value="No" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=2;fontSize=10;fontColor=#E74C3C;" edge="1" parent="1" source="aprobacion" target="rechazado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-aprob-acept" value="Si" style="endArrow=classic;html=1;strokeColor=#27AE60;strokeWidth=2;fontSize=10;fontColor=#27AE60;" edge="1" parent="1" source="aprobacion" target="aceptado">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-pac-activo" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="perfil-paciente" target="paciente-activo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PHASE 2: BUSQUEDA Y AGENDAMIENTO ===== -->
+        <!-- Buscar Psicologo -->
+        <mxCell id="buscar" value="Buscar Psicologo&#10;(por especialidad, calificacion)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="960" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Ver Perfil -->
+        <mxCell id="ver-perfil" value="Ver Perfil del Psicologo&#10;(trayectoria, resenas)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1060" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Ver Disponibilidad -->
+        <mxCell id="ver-disp" value="Ver Disponibilidad&#10;en Calendario" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1160" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Seleccionar Slot -->
+        <mxCell id="seleccionar" value="Seleccionar Fecha&#10;y Hora" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1260" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections Phase 2 -->
+        <mxCell id="c-pac-buscar" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="paciente-activo" target="buscar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-acept-buscar" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="aceptado" target="buscar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-buscar-perfil" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="buscar" target="ver-perfil">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-perfil-disp" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="ver-perfil" target="ver-disp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-disp-sel" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="ver-disp" target="seleccionar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PHASE 3: PAGO Y CONFIRMACION ===== -->
+        <!-- Pagar -->
+        <mxCell id="pagar" value="Realizar Pago&#10;(Tarjeta / SINPE / PayPal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1380" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Pasarela Externa -->
+        <mxCell id="pasarela" value="Pasarela de Pago&#10;(Stripe / PayPal / SINPE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#999999;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1380" width="160" height="60" as="geometry" />
+        </mxCell>
+        <!-- Pago Exitoso? -->
+        <mxCell id="pago-ok" value="Pago&#10;Exitoso?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;strokeWidth=2;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- Confirmacion -->
+        <mxCell id="confirmacion" value="Confirmacion de Cita&#10;(Email + Notificacion Push)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=#1E8449;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1580" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Recordatorio -->
+        <mxCell id="recordatorio" value="Recordatorio&#10;(24h y 1h antes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1680" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections Phase 3 -->
+        <mxCell id="c-sel-pagar" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="seleccionar" target="pagar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-pagar-pasarela" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#999999;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="pagar" target="pasarela">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-pagar-ok" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="pagar" target="pago-ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-ok-confirm" value="Si" style="endArrow=classic;html=1;strokeColor=#27AE60;strokeWidth=2;fontSize=10;fontColor=#27AE60;" edge="1" parent="1" source="pago-ok" target="confirmacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-confirm-record" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="confirmacion" target="recordatorio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PHASE 4: SESION TERAPEUTICA ===== -->
+        <!-- Iniciar Sesion -->
+        <mxCell id="iniciar-sesion" value="Iniciar Sesion&#10;(Video o Chat)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1800" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Sesion en Curso -->
+        <mxCell id="sesion-curso" value="Sesion en Curso&#10;(Video E2E / Chat Seguro)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E44AD;strokeColor=#6C3483;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1900" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Notas Clinicas -->
+        <mxCell id="notas" value="Notas Clinicas&#10;(Psicologo)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#8E44AD;strokeColor=#6C3483;strokeWidth=2;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- Grabacion? -->
+        <mxCell id="grabacion" value="Consentimiento&#10;de Grabacion?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=#D68910;strokeWidth=2;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- Finalizar Sesion -->
+        <mxCell id="finalizar" value="Finalizar Sesion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="2100" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections Phase 4 -->
+        <mxCell id="c-record-iniciar" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="recordatorio" target="iniciar-sesion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-iniciar-curso" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="iniciar-sesion" target="sesion-curso">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-curso-notas" value="" style="endArrow=classic;html=1;strokeColor=#8E44AD;strokeWidth=1.5;" edge="1" parent="1" source="sesion-curso" target="notas">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-curso-grab" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="sesion-curso" target="grabacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-grab-final" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="grabacion" target="finalizar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PHASE 5: POST-SESION ===== -->
+        <!-- Cobro -->
+        <mxCell id="cobro" value="Cobro Automatico&#10;(Comision 15% Plataforma)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="2220" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Calificacion -->
+        <mxCell id="calificacion" value="Calificar Sesion&#10;(1-5 Estrellas + Comentario)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="2320" width="180" height="60" as="geometry" />
+        </mxCell>
+        <!-- Historial -->
+        <mxCell id="historial" value="Guardar en&#10;Historial" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#8E44AD;strokeColor=#6C3483;strokeWidth=2;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="2320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- Fin -->
+        <mxCell id="fin" value="Fin" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;strokeWidth=2;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2440" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Connections Phase 5 -->
+        <mxCell id="c-final-cobro" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="finalizar" target="cobro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-cobro-calif" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="cobro" target="calificacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-calif-hist" value="" style="endArrow=classic;html=1;strokeColor=#8E44AD;strokeWidth=1.5;" edge="1" parent="1" source="calificacion" target="historial">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c-calif-fin" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="calificacion" target="fin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== ADMIN PANEL SIDEBAR ===== -->
+        <!-- Admin Panel -->
+        <mxCell id="admin-panel" value="PANEL DE ADMINISTRACION&#10;&#10;- Gestion de Usuarios&#10;- Aprobacion de Psicologos&#10;- Moderacion de Contenido&#10;- Reportes y Analiticas&#10;- Gestion de Pagos&#10;- Auditoria y Logs&#10;- Configuracion del Sistema&#10;- Soporte y Tickets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=3;arcSize=8;fontSize=11;fontColor=#ECF0F1;align=left;verticalAlign=top;shadow=1;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="550" y="200" width="280" height="340" as="geometry" />
+        </mxCell>
+        <!-- Admin connections -->
+        <mxCell id="admin-users" value="Gestiona" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;" edge="1" parent="1" source="admin-panel" target="registro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-psych" value="Aprueba" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;" edge="1" parent="1" source="admin-panel" target="aprobacion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-payments" value="Supervisa" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;" edge="1" parent="1" source="admin-panel" target="pagar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin-sessions" value="Monitorea" style="endArrow=classic;html=1;strokeColor=#E74C3C;strokeWidth=1.5;dashed=1;dashPattern=5 5;fontSize=9;fontColor=#E74C3C;" edge="1" parent="1" source="admin-panel" target="sesion-curso">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Phase Labels -->
+        <mxCell id="phase1-label" value="FASE 1: REGISTRO Y AUTENTICACION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="500" y="120" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="phase2-label" value="FASE 2: BUSQUEDA Y AGENDAMIENTO" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="500" y="960" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="phase3-label" value="FASE 3: PAGO Y CONFIRMACION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1380" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="phase4-label" value="FASE 4: SESION TERAPEUTICA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1800" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="phase5-label" value="FASE 5: POST-SESION" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="500" y="2220" width="350" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Note -->
+        <mxCell id="note-flow" value="NOTA: Este flujo muestra el camino principal del usuario.&#10;Flujos alternativos (cancelacion, reprogramacion, emergencias)&#10;se documentan en diagramas de flujo especificos en modulos/flujos/" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#FFC107;strokeWidth=1;arcSize=8;fontSize=10;fontColor=#856404;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="550" y="580" width="280" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

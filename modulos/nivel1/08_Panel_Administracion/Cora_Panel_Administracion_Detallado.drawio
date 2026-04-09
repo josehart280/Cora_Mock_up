@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:15:00.000Z" agent="Cora SDD" version="24.0.0" type="device">
+  <diagram id="cora-admin-nivel1" name="Cora - Panel de Administracion (Nivel 1)">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Modulo 8: Panel de Administracion (Nivel 1)&#10;Detalle de Subcomponentes e Interfaces | Version 1.0 | 04/04/2026" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="770" height="50" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 1: Dashboard General -->
+        <mxCell id="sub-dashboard" value="Dashboard General&#10;- KPIs en tiempo real&#10;- Usuarios activos&#10;- Sesiones del dia&#10;- Ingresos y metricas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 2: Gestion de Usuarios -->
+        <mxCell id="sub-users" value="Gestion de Usuarios&#10;- Buscar/ver/editar&#10;- Activar/desactivar&#10;- Eliminar cuentas&#10;- Ver historial" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 3: Aprobacion de Psicologos -->
+        <mxCell id="sub-psych-approval" value="Aprobacion de Psicologos&#10;- Revisar solicitudes&#10;- Verificar documentos&#10;- Aprobar/rechazar&#10;- Notificar resultado" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 4: Gestion de Contenido -->
+        <mxCell id="sub-content" value="Gestion de Contenido&#10;- Revisar reportes&#10;- Eliminar contenido&#10;- Advertir/banear&#10;- Registrar decision" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 5: Reportes y Analiticas -->
+        <mxCell id="sub-reports" value="Reportes y Analiticas&#10;- Reportes de uso&#10;- Metricas de calidad&#10;- Ingresos y tendencias&#10;- Exportar datos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 6: Gestion de Pagos -->
+        <mxCell id="sub-payments-admin" value="Gestion de Pagos&#10;- Supervisar transacciones&#10;- Aprobar reembolsos&#10;- Ver liquidaciones&#10;- Reportes financieros" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 7: Auditoria y Logs -->
+        <mxCell id="sub-audit" value="Auditoria y Logs&#10;- Logs inmutables&#10;- Trazabilidad completa&#10;- Quien hizo que&#10;- Marca de tiempo e IP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 8: Configuracion del Sistema -->
+        <mxCell id="sub-config" value="Configuracion del Sistema&#10;- Porcentaje comision&#10;- Politicas cancelacion&#10;- Limites transaccion&#10;- Parametros globales" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 9: Soporte y Tickets -->
+        <mxCell id="sub-support" value="Soporte y Tickets&#10;- Cola de tickets&#10;- Priorizacion&#10;- Asignacion equipo&#10;- Seguimiento" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1A252F;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Subcomponent 10: Roles y Permisos -->
+        <mxCell id="sub-rbac" value="Roles y Permisos (RBAC)&#10;- Crear roles&#10;- Permisos granulares&#10;- Minimo privilegio&#10;- 2FA obligatorio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DC3545;strokeColor=#BD2130;strokeWidth=2;arcSize=12;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="420" width="200" height="100" as="geometry" />
+        </mxCell>
+        <!-- Connections between subcomponents -->
+        <mxCell id="conn-dash-users" value="Acceso" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-dashboard" target="sub-users">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-users-psych" value="Verificar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-users" target="sub-psych-approval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-psych-content" value="Moderar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-psych-approval" target="sub-content">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-content-reports" value="Datos" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-content" target="sub-reports">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-reports-payments" value="Financiero" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-reports" target="sub-payments-admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-payments-audit" value="Registrar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-payments-admin" target="sub-audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-config-support" value="Configurar" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-config" target="sub-support">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-support-rbac" value="Permisos" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=1.5;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontColor=#333333;" edge="1" parent="1" source="sub-support" target="sub-rbac">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- External Interfaces -->
+        <mxCell id="ext-auth-admin" value="-&gt; Autenticacion&#10;2FA obligatorio para admin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="100" y="600" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-all-modules" value="-&gt; Todos los Modulos&#10;Lectura/esc segun permisos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="340" y="600" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-db-admin" value="-&gt; Base de Datos&#10;Consultas administrativas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#CCCCCC;strokeWidth=2;arcSize=8;dashed=1;dashPattern=5 5;fontSize=10;fontColor=#666666;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="580" y="600" width="180" height="55" as="geometry" />
+        </mxCell>
+        <!-- Connections to external -->
+        <mxCell id="conn-admin-auth" value="" style="endArrow=classic;html=1;strokeColor=#2C3E50;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-dashboard" target="ext-auth-admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-modules" value="" style="endArrow=classic;html=1;strokeColor=#2C3E50;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-users" target="ext-all-modules">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-db" value="" style="endArrow=classic;html=1;strokeColor=#2C3E50;strokeWidth=1.5;dashed=1;dashPattern=5 5;" edge="1" parent="1" source="sub-reports" target="ext-db-admin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Security Note -->
+        <mxCell id="security-note-admin" value="SEGURIDAD: 2FA obligatorio para todos los admins&#10;RBAC con principio de minimo privilegio&#10;Logs inmutables de todas las acciones&#10;Cumplimiento Ley 8968 para datos personales" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#FFC107;strokeWidth=1;arcSize=8;fontSize=10;fontColor=#856404;align=left;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="20" y="700" width="300" height="70" as="geometry" />
+        </mxCell>
+        <!-- Legend -->
+        <mxCell id="legend-admin" value="Leyenda:&#10;Gris oscuro = Componente de Administracion&#10;Rojo = Componente Critico/Seguridad&#10;Gris punteado = Interfaces externas" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="860" y="700" width="250" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
