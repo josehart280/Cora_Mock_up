@@ -41,24 +41,6 @@
 - **Cuenta de Supabase** ([Registrarse](https://supabase.com/))
 - **Cuenta de Stripe** (para desarrollo: [Stripe Dashboard](https://dashboard.stripe.com/))
 
-### Clonar el Repositorio
-
-```bash
-git clone https://github.com/tu-usuario/cora.git
-cd cora
-```
-
-### Instalación de Dependencias
-
-```bash
-# Instalar dependencias del frontend
-cd frontend
-npm install
-
-# Instalar dependencias del backend
-cd ../backend
-npm install
-```
 
 ## Estructura del Proyecto
 
@@ -93,92 +75,7 @@ cora/
 └── README.md
 ```
 
-## Configuración
 
-### 1. Configurar Supabase
-
-1. Crear un proyecto en [Supabase](https://supabase.com/dashboard)
-2. Ir a **Settings > API** y copiar:
-   - `Project URL`
-   - `anon/public` key (para frontend)
-   - `service_role` key (solo para backend, NUNCA exponer)
-
-3. Ejecutar el schema inicial en **SQL Editor** de Supabase:
-
-```sql
--- El schema completo está en docs/database/schema.sql
-```
-
-4. Configurar **Row Level Security (RLS)** para cada tabla
-
-### 2. Configurar Variables de Entorno
-
-```bash
-# Backend
-cd backend
-cp .env.example .env
-```
-
-Editar `.env` con tus credenciales:
-
-```env
-# Backend (.env)
-NODE_ENV=development
-PORT=3001
-
-# Supabase
-SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_ANON_KEY=tu-anon-key
-SUPABASE_SERVICE_ROLE_KEY=tu-service-role-key
-
-# Frontend URL (para CORS)
-FRONTEND_URL=http://localhost:5173
-
-# Stripe
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-
-# Email
-SMTP_HOST=smtp.sendgrid.net
-SMTP_PORT=587
-SMTP_USER=apikey
-SMTP_PASS=tu-sendgrid-api-key
-EMAIL_FROM=noreply@tucora.com
-```
-
-```bash
-# Frontend
-cd ../frontend
-cp .env.example .env
-```
-
-```env
-# Frontend (.env)
-VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
-VITE_SUPABASE_ANON_KEY=tu-anon-key
-VITE_STRIPE_PUBLIC_KEY=pk_test_...
-VITE_API_URL=http://localhost:3001/api
-```
-
-### 3. Configurar Stripe (Webhook Local)
-
-Para desarrollo local, usar [Stripe CLI](https://stripe.com/docs/stripe-cli):
-
-```bash
-# Instalar Stripe CLI
-# Windows:
-winget install stripe.stripe-cli
-
-# Login
-stripe login
-
-# Reenviar webhooks a localhost
-stripe listen --forward-to localhost:3001/webhooks/stripe
-```
-
-Copiar el **webhook signing secret** (`whsec_...`) a tu `.env`
-
-## Scripts Disponibles
 
 ### Frontend
 
