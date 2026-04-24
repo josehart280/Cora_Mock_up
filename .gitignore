@@ -176,6 +176,7 @@ CLAUDE.md
 .atl/
 .opencode/
 .ruff_cache/
+.gemini/
 
 # Temporary/garbage files
 nul
