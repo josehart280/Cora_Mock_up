@@ -82,6 +82,17 @@ export default function Login() {
             <span className="text-xl font-bold gradient-text">Cora</span>
           </Link>
 
+          {/* Botón para volver al inicio */}
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-surface-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors mb-6"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Volver al inicio
+          </Link>
+
           <h1 className="text-3xl font-black text-surface-900 dark:text-white mb-2">Bienvenido de vuelta</h1>
           <p className="text-surface-500 mb-8">Ingresá a tu cuenta para continuar</p>
 

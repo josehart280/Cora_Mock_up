@@ -29,16 +29,21 @@ export const useAuthStore = create((set, get) => ({
     }
 
     // Listener para cambios de sesión (login, logout, token refresh)
-    supabase.auth.onAuthStateChange(async (event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (event === 'SIGNED_IN' && session?.user) {
         const profile = await get().fetchProfile(session.user.id)
-        set({ user: session.user, profile, isAuthenticated: true, error: null })
+        set({ user: session.user, profile, isAuthenticated: true, error: null, loading: false })
       } else if (event === 'SIGNED_OUT') {
-        set({ user: null, profile: null, isAuthenticated: false })
+        set({ user: null, profile: null, isAuthenticated: false, loading: false, error: null })
       } else if (event === 'TOKEN_REFRESHED' && session?.user) {
         set({ user: session.user })
       }
     })
+
+    // Retornar función de cleanup para el componente que llame initialize
+    return () => {
+      subscription?.unsubscribe()
+    }
   },
 
   // Obtener perfil de la tabla profiles
@@ -106,15 +111,33 @@ export const useAuthStore = create((set, get) => ({
 
   // Logout
   logout: async () => {
-    set({ loading: true })
-    await supabase.auth.signOut()
-    set({
-      user: null,
-      profile: null,
-      isAuthenticated: false,
-      loading: false,
-      error: null,
-    })
+    // Limpiar estado inmediatamente para UI responsiva
+    set({ loading: true, error: null })
+
+    try {
+      const { error } = await supabase.auth.signOut()
+      if (error) throw error
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error)
+    } finally {
+      // Siempre limpiar todo, sin importar si el signOut tuvo éxito
+      try {
+        // Limpiar localStorage completamente
+        localStorage.clear()
+        sessionStorage.clear()
+      } catch (e) {
+        console.error('Error limpiando storage:', e)
+      }
+
+      // Resetear estado
+      set({
+        user: null,
+        profile: null,
+        isAuthenticated: false,
+        loading: false,
+        error: null,
+      })
+    }
   },
 
   // Actualizar perfil

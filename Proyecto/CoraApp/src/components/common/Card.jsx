@@ -1,14 +1,16 @@
 import { clsx } from 'clsx'
 
-export function Card({ children, className, hover = false, glass = false, ...props }) {
+export function Card({ children, className, hover = false, glass = false, glow = false, is3d = false, ...props }) {
   return (
     <div
       className={clsx(
-        'rounded-2xl border',
+        'rounded-2xl border transition-all duration-500 ease-out',
         glass
-          ? 'glass shadow-glass'
-          : 'bg-white dark:bg-surface-900 border-surface-100 dark:border-surface-800 shadow-sm',
+          ? 'glass-card shadow-soft-lg'
+          : 'bg-white dark:bg-surface-900 border-surface-100 dark:border-surface-800 shadow-soft',
         hover && 'card-hover cursor-pointer',
+        glow && 'card-glow',
+        is3d && 'card-3d',
         className
       )}
       {...props}

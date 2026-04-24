@@ -72,6 +72,13 @@ export default {
         'glass-lg': '0 8px 60px rgba(0, 0, 0, 0.15)',
         'cora': '0 4px 24px rgba(42, 168, 171, 0.2)',
         'cora-lg': '0 8px 48px rgba(42, 168, 171, 0.3)',
+        'glow-teal': '0 0 20px rgba(42, 168, 171, 0.4)',
+        'glow-sage': '0 0 20px rgba(109, 137, 88, 0.4)',
+        'glow-warm': '0 0 20px rgba(214, 142, 45, 0.4)',
+        'inner-glow': 'inset 0 2px 4px rgba(255, 255, 255, 0.1)',
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
+        'elegant': '0 10px 40px -10px rgba(42, 168, 171, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
       },
       backgroundImage: {
         'gradient-cora': 'linear-gradient(135deg, #2aa8ab 0%, #1c6a6d 100%)',
@@ -81,16 +88,30 @@ export default {
       },
       animation: {
         'fade-in': 'fadeIn 0.4s ease-out',
+        'fade-out': 'fadeOut 0.2s ease-out',
         'slide-up': 'slideUp 0.4s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
+        'slide-left': 'slideLeft 0.3s ease-out',
+        'slide-right': 'slideRight 0.3s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
+        'scale-out': 'scaleOut 0.2s ease-out',
+        'bounce-in': 'bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'spin-in': 'spinIn 0.5s ease-out',
+        'wiggle': 'wiggle 0.5s ease-in-out',
         'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
         'shimmer': 'shimmer 2s linear infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'float': 'float 3s ease-in-out infinite',
+        'gradient': 'gradient 8s linear infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
         },
         slideUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
@@ -100,9 +121,35 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(-10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        slideLeft: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideRight: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
         scaleIn: {
           '0%': { opacity: '0', transform: 'scale(0.95)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        scaleOut: {
+          '0%': { opacity: '1', transform: 'scale(1)' },
+          '100%': { opacity: '0', transform: 'scale(0.95)' },
+        },
+        bounceIn: {
+          '0%': { opacity: '0', transform: 'scale(0.3)' },
+          '50%': { transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        spinIn: {
+          '0%': { opacity: '0', transform: 'rotate(-180deg) scale(0.5)' },
+          '100%': { opacity: '1', transform: 'rotate(0deg) scale(1)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         },
         pulseSoft: {
           '0%, 100%': { opacity: '1' },
@@ -111,6 +158,19 @@ export default {
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(42, 168, 171, 0.3), 0 0 10px rgba(42, 168, 171, 0.2)' },
+          '100%': { boxShadow: '0 0 20px rgba(42, 168, 171, 0.5), 0 0 30px rgba(42, 168, 171, 0.3)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
       },
       backdropBlur: {

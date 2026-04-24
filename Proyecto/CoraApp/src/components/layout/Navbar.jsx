@@ -17,9 +17,17 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [isLoggingOut, setIsLoggingOut] = useState(false)
   const { profile, isAuthenticated, logout } = useAuthStore()
   const { theme, toggleTheme } = useUiStore()
   const navigate = useNavigate()
+
+  // Efecto para navegar al login cuando el usuario cierra sesión
+  useEffect(() => {
+    if (!isAuthenticated && isLoggingOut) {
+      navigate('/login', { replace: true })
+    }
+  }, [isAuthenticated, isLoggingOut, navigate])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -27,10 +35,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleLogout = () => {
-    logout()
-    navigate('/')
+  const handleLogout = async () => {
     setUserMenuOpen(false)
+    setIsLoggingOut(true)
+    await logout()
   }
 
   const dashboardPath = profile?.role === 'admin' ? '/admin' :

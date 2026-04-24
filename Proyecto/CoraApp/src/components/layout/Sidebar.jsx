@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { clsx } from 'clsx'
 import { useAuthStore } from '../../store/authStore'
@@ -70,7 +71,10 @@ export default function Sidebar() {
   const navItems = profile?.role === 'admin' ? adminNav :
     profile?.role === 'psychologist' ? therapistNav : patientNav
 
-  const handleLogout = () => { logout(); navigate('/') }
+  const handleLogout = async () => {
+    await logout()
+    navigate('/login')
+  }
 
   return (
     <aside className={clsx(

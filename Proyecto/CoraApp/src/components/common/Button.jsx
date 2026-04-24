@@ -1,14 +1,14 @@
 import { clsx } from 'clsx'
 
 const variants = {
-  primary: 'bg-teal-500 hover:bg-teal-600 text-white shadow-cora hover:shadow-cora-lg',
-  secondary: 'bg-white hover:bg-surface-50 dark:bg-surface-900 dark:hover:bg-surface-800 text-teal-600 dark:text-teal-400 border border-teal-200 dark:border-teal-800',
-  ghost: 'bg-transparent hover:bg-teal-50 dark:hover:bg-teal-900/20 text-teal-600 dark:text-teal-400',
-  danger: 'bg-red-500 hover:bg-red-600 text-white',
-  sage: 'bg-sage-500 hover:bg-sage-600 text-white',
-  warm: 'bg-warm-500 hover:bg-warm-600 text-white',
-  dark: 'bg-surface-900 hover:bg-surface-800 text-white dark:bg-white dark:hover:bg-surface-100 dark:text-surface-900',
-  glass: 'glass hover:bg-white/90 dark:hover:bg-surface-900/90 text-surface-900 dark:text-white',
+  primary: 'bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-400 hover:to-teal-500 text-white shadow-cora hover:shadow-cora-lg hover:shadow-glow-teal',
+  secondary: 'bg-white/90 hover:bg-white dark:bg-surface-800/90 dark:hover:bg-surface-800 text-teal-600 dark:text-teal-400 border-2 border-teal-200/50 dark:border-teal-700/50 hover:border-teal-300 dark:hover:border-teal-600 backdrop-blur-sm',
+  ghost: 'bg-transparent hover:bg-teal-50/80 dark:hover:bg-teal-900/30 text-teal-600 dark:text-teal-400 border border-transparent hover:border-teal-200 dark:hover:border-teal-800',
+  danger: 'bg-gradient-to-r from-coral-500 to-red-600 hover:from-coral-400 hover:to-red-500 text-white shadow-lg hover:shadow-coral-500/30',
+  sage: 'bg-gradient-to-r from-sage-500 to-sage-600 hover:from-sage-400 hover:to-sage-500 text-white shadow-lg hover:shadow-sage-500/30',
+  warm: 'bg-gradient-to-r from-warm-500 to-warm-600 hover:from-warm-400 hover:to-warm-500 text-white shadow-lg hover:shadow-warm-500/30',
+  dark: 'bg-gradient-to-r from-surface-800 to-surface-900 hover:from-surface-700 hover:to-surface-800 text-white shadow-lg dark:bg-white dark:from-white dark:to-surface-100 dark:hover:from-surface-100 dark:hover:to-white dark:text-surface-900',
+  glass: 'glass-card hover:bg-white/95 dark:hover:bg-surface-900/95 text-surface-900 dark:text-white',
 }
 
 const sizes = {
@@ -29,15 +29,20 @@ export function Button({
   fullWidth = false,
   leftIcon,
   rightIcon,
+  shine = false,
+  magnetic = false,
   ...props
 }) {
   return (
     <button
       className={clsx(
         'inline-flex items-center justify-center gap-2 font-semibold',
-        'transition-all duration-200 cursor-pointer',
-        'focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2',
-        'active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100',
+        'transition-all duration-300 ease-out',
+        'focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:ring-offset-2 focus:ring-offset-surface-50 dark:focus:ring-offset-surface-900',
+        'disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 disabled:shadow-none',
+        shine && 'btn-shine',
+        magnetic && 'btn-magnetic',
+        !disabled && !loading && 'hover:-translate-y-0.5 active:translate-y-0',
         variants[variant],
         sizes[size],
         fullWidth && 'w-full',
@@ -52,7 +57,7 @@ export function Button({
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
         </svg>
       ) : leftIcon}
-      {children}
+      <span className="relative z-10">{children}</span>
       {!loading && rightIcon}
     </button>
   )

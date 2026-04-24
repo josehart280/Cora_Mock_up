@@ -1,14 +1,14 @@
 import { clsx } from 'clsx'
 
 const colors = {
-  teal: 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400',
-  sage: 'bg-sage-100 text-sage-700 dark:bg-sage-900/30 dark:text-sage-400',
-  warm: 'bg-warm-100 text-warm-700 dark:bg-warm-900/30 dark:text-warm-400',
-  red: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
-  green: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
-  yellow: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
-  gray: 'bg-surface-100 text-surface-600 dark:bg-surface-800 dark:text-surface-400',
-  blue: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
+  teal: 'bg-gradient-to-r from-teal-100 to-teal-50 text-teal-700 dark:from-teal-900/40 dark:to-teal-900/20 dark:text-teal-300 border border-teal-200/50 dark:border-teal-700/30',
+  sage: 'bg-gradient-to-r from-sage-100 to-sage-50 text-sage-700 dark:from-sage-900/40 dark:to-sage-900/20 dark:text-sage-300 border border-sage-200/50 dark:border-sage-700/30',
+  warm: 'bg-gradient-to-r from-warm-100 to-warm-50 text-warm-700 dark:from-warm-900/40 dark:to-warm-900/20 dark:text-warm-300 border border-warm-200/50 dark:border-warm-700/30',
+  red: 'bg-gradient-to-r from-red-100 to-red-50 text-red-700 dark:from-red-900/40 dark:to-red-900/20 dark:text-red-300 border border-red-200/50 dark:border-red-700/30',
+  green: 'bg-gradient-to-r from-green-100 to-green-50 text-green-700 dark:from-green-900/40 dark:to-green-900/20 dark:text-green-300 border border-green-200/50 dark:border-green-700/30',
+  yellow: 'bg-gradient-to-r from-yellow-100 to-yellow-50 text-yellow-700 dark:from-yellow-900/40 dark:to-yellow-900/20 dark:text-yellow-300 border border-yellow-200/50 dark:border-yellow-700/30',
+  gray: 'bg-gradient-to-r from-surface-100 to-surface-50 text-surface-600 dark:from-surface-800 dark:to-surface-800/80 dark:text-surface-300 border border-surface-200/50 dark:border-surface-700/30',
+  blue: 'bg-gradient-to-r from-blue-100 to-blue-50 text-blue-700 dark:from-blue-900/40 dark:to-blue-900/20 dark:text-blue-300 border border-blue-200/50 dark:border-blue-700/30',
 }
 
 const statusColors = {
