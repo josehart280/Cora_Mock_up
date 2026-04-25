@@ -54,10 +54,9 @@ export default function TherapistDashboard() {
   const [recentPatients, setRecentPatients] = useState([])
 
   useEffect(() => {
-    async function loadDashboardData() {
+    const loadData = async () => {
       if (!profile?.id) return
       
-      setLoading(true)
       try {
         const [statsData, apptsData] = await Promise.all([
           dashboardRepository.getTherapistStats(profile.id),
@@ -66,12 +65,10 @@ export default function TherapistDashboard() {
 
         setStats(statsData)
         
-        // Filter appts that are actually today
         const todayStr = new Date().toISOString().split('T')[0]
         const todayOnly = apptsData.filter(a => a.scheduledAt.startsWith(todayStr))
         setTodayAppts(todayOnly)
 
-        // Derive recent patients from appointments (just a simple way for the dashboard)
         const patientMap = new Map()
         apptsData.forEach(a => {
           if (!patientMap.has(a.patient.id)) {
@@ -83,15 +80,32 @@ export default function TherapistDashboard() {
           }
         })
         setRecentPatients(Array.from(patientMap.values()).slice(0, 4))
-
       } catch (err) {
         console.error('Error loading therapist dashboard:', err)
-      } finally {
-        setLoading(false)
       }
     }
 
-    loadDashboardData()
+    const initDashboard = async () => {
+      setLoading(true)
+      await loadData()
+      setLoading(false)
+    }
+
+    initDashboard()
+
+    // Real-time subscription
+    const subscription = appointmentRepository.subscribeToChanges(
+      profile.id,
+      'psychologist',
+      () => {
+        // Refresh everything on change
+        loadData()
+      }
+    )
+
+    return () => {
+      subscription.unsubscribe()
+    }
   }, [profile])
 
   return (

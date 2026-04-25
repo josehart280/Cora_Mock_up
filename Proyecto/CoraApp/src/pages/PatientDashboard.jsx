@@ -56,10 +56,9 @@ export default function PatientDashboard() {
   const [assignedTherapist, setAssignedTherapist] = useState(null)
 
   useEffect(() => {
-    async function loadDashboardData() {
+    const loadData = async () => {
       if (!profile?.id) return
       
-      setLoading(true)
       try {
         const [statsData, nextData, historyData] = await Promise.all([
           dashboardRepository.getPatientStats(profile.id),
@@ -71,9 +70,6 @@ export default function PatientDashboard() {
         setNextAppt(nextData)
         setHistory(historyData)
 
-        // If patient has a therapist assigned in their profile, fetch their info
-        // Wait, patient_profiles table has therapist_id. I should fetch it.
-        // For now, let's look for the therapist in the next appointment if available
         if (nextData) {
           setAssignedTherapist(nextData.psychologist)
         } else if (historyData.length > 0) {
@@ -81,12 +77,30 @@ export default function PatientDashboard() {
         }
       } catch (err) {
         console.error('Error loading dashboard:', err)
-      } finally {
-        setLoading(false)
       }
     }
 
-    loadDashboardData()
+    const initDashboard = async () => {
+      setLoading(true)
+      await loadData()
+      setLoading(false)
+    }
+
+    initDashboard()
+
+    // Real-time subscription
+    const subscription = appointmentRepository.subscribeToChanges(
+      profile.id,
+      'patient',
+      () => {
+        // Refresh everything on change
+        loadData()
+      }
+    )
+
+    return () => {
+      subscription.unsubscribe()
+    }
   }, [profile])
 
   const nextDate = nextAppt ? new Date(nextAppt.scheduledAt) : null

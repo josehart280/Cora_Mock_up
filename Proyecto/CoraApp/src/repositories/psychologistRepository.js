@@ -105,7 +105,7 @@ export const psychologistRepository = {
       .from('verified_psychologists')
       .select('*')
       .eq('id', id)
-      .single()
+      .maybeSingle()
 
     if (error) throw error
     return transformFromDB(data)

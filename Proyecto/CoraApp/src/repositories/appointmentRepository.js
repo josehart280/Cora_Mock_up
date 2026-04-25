@@ -16,7 +16,7 @@ export const appointmentRepository = {
       .eq('patient_id', patientId)
       .order('scheduled_at', { ascending: false })
 
-    if (status) {
+    if (status && status !== 'all') {
       query = query.eq('status', status)
     }
 
@@ -35,7 +35,7 @@ export const appointmentRepository = {
       .eq('psychologist_id', therapistId)
       .order('scheduled_at', { ascending: true })
 
-    if (status) {
+    if (status && status !== 'all') {
       query = query.eq('status', status)
     }
 
@@ -58,13 +58,73 @@ export const appointmentRepository = {
       .gte('scheduled_at', new Date().toISOString())
       .order('scheduled_at', { ascending: true })
       .limit(1)
+      .maybeSingle()
+
+    if (error) throw error
+    return transformAppointment(data)
+  },
+
+  /**
+   * Create a new appointment
+   */
+  async createAppointment({ patientId, psychologistId, scheduledAt, type, duration = 60 }) {
+    // Generate a simple room ID for the session
+    const roomId = `room-${Math.random().toString(36).substring(2, 9)}`
+
+    const { data, error } = await supabase
+      .from('appointments')
+      .insert({
+        patient_id: patientId,
+        psychologist_id: psychologistId,
+        scheduled_at: scheduledAt,
+        session_type: type,
+        duration_minutes: duration,
+        status: 'scheduled',
+        room_id: roomId
+      })
+      .select()
       .single()
 
-    if (error) {
-      if (error.code === 'PGRST116') return null // No upcoming appt
-      throw error
-    }
-    return transformAppointment(data)
+    if (error) throw error
+    return data
+  },
+
+  /**
+   * Cancel an appointment
+   */
+  async cancelAppointment(appointmentId) {
+    const { data, error } = await supabase
+      .from('appointments')
+      .update({ status: 'cancelled' })
+      .eq('id', appointmentId)
+      .select()
+      .single()
+
+    if (error) throw error
+    return data
+  },
+
+  /**
+   * Subscribe to real-time changes for a user's appointments
+   */
+  subscribeToChanges(userId, role, onUpdate) {
+    const roleIdField = role === 'patient' ? 'patient_id' : 'psychologist_id'
+
+    return supabase
+      .channel(`appointments-${userId}`)
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'appointments',
+          filter: `${roleIdField}=eq.${userId}`
+        },
+        (payload) => {
+          onUpdate(payload)
+        }
+      )
+      .subscribe()
   }
 }
 
